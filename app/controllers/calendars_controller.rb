@@ -34,6 +34,7 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
+
       
       wday_num = (@todays_date + x).wday# wdayメソッドを用いて取得した数値
       if wday_num >= 7#「wday_numが7以上の場合」という条件式
@@ -46,8 +47,8 @@ class CalendarsController < ApplicationController
       # 取り方：配列wdaysから要素を取得する
       # おさらい：配列から要素を取得する方法
       # ↑の考え方にwday_num（数字が入っている）を使う
+
       @week_days.push(days)
     end
-
   end
 end
