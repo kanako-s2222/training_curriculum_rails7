@@ -40,7 +40,7 @@ class CalendarsController < ApplicationController
         wday_num = wday_num -7
       end
 
-      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num] }
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: wdays[wday_num] }
       # :wday =>「(@todays_date + x).wday」の部分を変更する必要がある
       # 「（月）」等が取れるように変更する
       # 取り方：配列wdaysから要素を取得する
